@@ -34,3 +34,31 @@ Here's an example, using the earlier Hubot script:
           msg.send 'Hammertime.'
           
 So, when Hubot responds to this, the callback is only executed if the command is not currently rate limited.
+
+## Installation via NPM
+
+Run the following command to install this module as a Hubot dependency
+
+```
+npm install hubot-rate-limiter --save
+```
+
+Confirm that hubot-standup-alarm appears as a dependency in your Hubot package.json file.
+
+```
+"dependencies": {
+  "hubot":              "2.x",
+  "hubot-scripts":      "2.x",
+  "hubot-rate-limiter": "*"
+}
+```
+
+To enable the script, add the hubot-standup-alarm entry to the external-scripts.json file (you may need to create this file).
+
+```
+  ["hubot-rate-limiter"]
+```
+
+## Contributing
+
+Feel free! Send a pull request :)
