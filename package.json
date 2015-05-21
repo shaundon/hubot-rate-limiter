@@ -1,0 +1,25 @@
+{
+  "name": "hubot-rate-limiter",
+  "version": "0.0.1",
+  "description": "Hubot script that allows other scripts to be rate limited.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shaundon/hubot-rate-limiter.git"
+  },
+  "keywords": [
+    "hubot",
+    "hubot-scripts"
+  ],
+  "dependencies": {
+  },
+  "author": "Shaun Donnelly <shaundonnelly@gmail.com>",
+  "licence": "MIT",
+  "bugs": {
+    "url": "https://github.com/shaundon/hubut-rate-limiter/issues"
+  },
+  "homepage": "https://github.com/shaundon/hubot-rate-limiter",
+  "devDependencies": {},
+  "license": "MIT"
+}
