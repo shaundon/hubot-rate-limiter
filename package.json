@@ -1,6 +1,6 @@
 {
   "name": "hubot-rate-limiter",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Hubot script that allows other scripts to be rate limited.",
   "main": "index.js",
   "scripts": {},

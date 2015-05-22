@@ -147,6 +147,5 @@ module.exports = function(robot) {
      */
     setTimeout(function() {
         RateLimiter._removeAllRateLimits();
-        robot.brain.remove(RateLimiter.constants.keyPrepend + 'soon');
     }, 5000);
 };
