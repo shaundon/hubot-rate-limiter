@@ -1,5 +1,7 @@
 # Hubot Rate Limiter
 
+[![npm version](https://badge.fury.io/js/hubot-rate-limiter.svg)](http://badge.fury.io/js/hubot-rate-limiter)
+
 ## What is this?
 
 Sometimes, Hubot can get a little annoying. 
