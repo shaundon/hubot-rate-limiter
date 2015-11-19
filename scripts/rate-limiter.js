@@ -19,6 +19,28 @@ module.exports = function(robot) {
         RateLimiter._doWithLimit(key, limitTimeMilliseconds, callback);
     });
 
+    robot.respond(/remove rate limit for (.*)$/i, function(msg) {
+        var key = msg.match[1];
+        RateLimiter._removeRateLimit(key);
+        msg.send('Removed any rate limit for ' + key + '.');
+    });
+
+    robot.respond(/list all rate limits/i, function(msg) {
+        var masterList = RateLimiter._getMasterList();
+        if (masterList.length > 0) {
+            msg.send("All rate limits:\n\n" + masterList.join("\n"));
+        }
+        else {
+            msg.send("There aren't any rate limits set at the moment.");
+        }
+    });
+
+    robot.respond(/remove all rate limits/i, function(msg) {
+        RateLimiter._removeAllRateLimits();
+        msg.send("Removed all rate limits. I hope you know what you're doing..");
+    });
+
+
     var RateLimiter = {
 
         constants: {
@@ -72,7 +94,6 @@ module.exports = function(robot) {
 
         _checkRateLimit: function(key) {
             var active = robot.brain.get(key) || false;
-            console.log(key, active);
             return active;
         },
 
